@@ -1,0 +1,22 @@
+h1{
+    color: red;
+    text-align: center;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+}
+
+#gif1{
+    margin-left: 1000px;
+}
+
+#sisas{
+ margin-left: 600px;
+}
+
+body{
+    background-color: rgba(41, 135, 4, 0.549);
+}
+

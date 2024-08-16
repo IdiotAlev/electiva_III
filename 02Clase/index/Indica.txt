@@ -1,0 +1,6 @@
+Colocar Titulo H1 al agua y color rojo y centrad *
+A los parrafos colocarles color azul y fuente verdana *
+Colocar una imagen entre el primer y segundo parrafo *
+Colocar una imagen a la derecha entre el segundo y tercer parrafo *
+Colocar una imagen centrada desp�es del tercer parrafo*
+Colocar un color de fondo a toda la p�gina*
