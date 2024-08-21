@@ -2,11 +2,51 @@ h2{
     color: red;
     text-align: center;
 }
+body{
+    background-image: url(../index/img/larti6.jpg);
+    background-repeat: no-repeat;
+    background-size: auto; /*cover, px*/
+    margin: 10px;
+}
 p{
     color: blueviolet;
     font-family: 'Times New Roman', Times, serif;
     font-size: 32px;
 }
-body{
-    bac
+
+section{
+    position:absolute;
+    margin-right: 400px;
+    
+}
+
+aside{
+position: absolute;
+width: 390px;
+height: 700px;
+margin-left: 1120px;
+margin-top: 45px;
+background-color: rgb(124, 45, 198);
+}
+
+ol{
+    list-style: lower-roman;
+    background-color: blueviolet;
+    margin: 10px;
+    
+}
+
+aside>h3{
+    text-align: center;
+    margin: 10px;
+    color: red;
+}
+footer{
+    text-align: center;
+    margin-top: 750px;
+    font-size: 30px;
+}
+
+footer>a>img{
+    width: 50px;
 }
