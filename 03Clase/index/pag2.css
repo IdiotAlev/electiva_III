@@ -3,7 +3,7 @@ h2{
     text-align: center;
 }
 body{
-    background-image: url(../index/img/larti6.jpg);
+    background-image: url(../img/larti6.jpg);
     background-repeat: no-repeat;
     background-size: auto; /*cover, px*/
     margin: 10px;
