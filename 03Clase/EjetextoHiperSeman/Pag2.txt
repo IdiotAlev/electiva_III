@@ -1,0 +1,18 @@
+Funcionamiento de la IA
+
+Si bien los detalles varían según las diferentes técnicas de IA, el principio central
+gira en torno a los datos. Los sistemas de IA aprenden y mejoran a través de la exposición
+a grandes cantidades de datos, lo que permite identificar patrones y relaciones que las
+personas pueden pasar por alto.
+
+Este proceso de aprendizaje suele implicar algoritmos, que son conjuntos de reglas
+o instrucciones que guían el análisis y la toma de decisiones de la IA. En el
+aprendizaje automático, un subconjunto popular de la IA, los algoritmos se entrenan
+con datos etiquetados o no etiquetados para hacer predicciones o categorizar información. 
+
+El aprendizaje profundo, una especialización adicional, utiliza redes neuronales 
+artificiales con varias capas para procesar información, imitando la estructura y 
+la función del cerebro humano. A través del aprendizaje y la adaptación continuos,
+los sistemas de IA se vuelven cada vez más hábiles en la realización de tareas 
+específicas, desde el reconocimiento de imágenes hasta la traducción de idiomas y 
+más.
