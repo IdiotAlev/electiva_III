@@ -1,0 +1,57 @@
+TALLER MANEJO DE TABLAS - TEXTOS E IMAGENES
+
+En el taller deben crear cuatro (4) páginas: index, pag2, pag3 y pag4. La
+apariencia deben realizarla usando la etiqueta style.
+Las información de las cuatro páginas deben estar relacionada y el contenido de
+estas debe ser el siguiente:
+La página index es la página principal y debe contener un título y cuatro párrafos
+sobre el tema y sobre esta deben realizar lo siguiente:
+
+• Al título de esta página deben colocarle un formato h1, centrarlo y color
+rojo.
+• Establecer un color de fondo a la página.
+• A los párrafos deben colocarle un color azul y tipo de letra verdana.
+• Ubicar dos imágenes entre el segundo y el tercer párrafo.
+• Ubicar una imagen entre el tercer y cuarto párrafo alineada a la derecha.
+• Establecer un enlace textual a la página pag2.
+• Establecer un enlace textual a la página pag3.
+• Establecer un enlace textual a la página pag4.
+• Establecer un enlace externo a una página referente a la temática
+seleccionada.
+
+
+La página pag2 
+debe contener un título, un primer párrafo, una lista ordenada, un
+segundo párrafo y una lista no ordenada, y sobre esta deben realizar lo siguiente:
+En la página pag2 deben realizar lo siguiente:
+• Al título de esta página deben colocarle un formato h1, centrarlo y color
+verde.
+• Establecer una imagen de fondo a la página.
+• Establecer una imagen centrada debajo del título.
+• Aplicar un formato a cada lista.
+• Establecer un enlace textual a la página index.
+• Establecer un enlace con una imagen a la página index.
+
+La página pag3
+debe contener una tabla con la estructura que se muestra a
+continuación:
+TITULO
+IMAGEN 1 TEXTO IMAGEN 2
+Enlace Texto a la página index Enlace Texto a sitio externo
+En la primera fila se debe colocar un titulo.
+En la primera columna de la segunda fila se debe colocar una imagen.
+En la segunda columna de la segunda fila se debe colocar un texto.
+En la tercera columna de la segunda fila se debe colocar una imagen.
+En la primera columna de la tercera fila se debe colocar un enlace de texto a la
+página index.
+En la segunda columna de la tercera fila se debe colocar un enlace de texto a un
+sitio externo.
+La tabla debe tener un borde con color y estar centrada en la página.
+La primera y tercera fila de la tabla deben tener un color de fondo.
+Toda la información debe estar relacionada con la temática del sitio.
+
+La página pag4
+ es de diseño libre y la información debe estar relacionada con las
+páginas anteriores.
+
+Nota: se tendrá en cuenta el diseño visual y organización de las páginas.
