@@ -5,19 +5,19 @@ apariencia deben realizarla usando la etiqueta style.
 Las información de las cuatro páginas deben estar relacionada y el contenido de
 estas debe ser el siguiente:
 La página index es la página principal y debe contener un título y cuatro párrafos
-sobre el tema y sobre esta deben realizar lo siguiente:
+sobre el tema y sobre esta deben realizar lo siguiente:*
 
 • Al título de esta página deben colocarle un formato h1, centrarlo y color
-rojo.
-• Establecer un color de fondo a la página.
-• A los párrafos deben colocarle un color azul y tipo de letra verdana.
-• Ubicar dos imágenes entre el segundo y el tercer párrafo.
-• Ubicar una imagen entre el tercer y cuarto párrafo alineada a la derecha.
-• Establecer un enlace textual a la página pag2.
-• Establecer un enlace textual a la página pag3.
-• Establecer un enlace textual a la página pag4.
+rojo.*
+• Establecer un color de fondo a la página.*
+• A los párrafos deben colocarle un color azul y tipo de letra verdana.*
+• Ubicar dos imágenes entre el segundo y el tercer párrafo.*
+• Ubicar una imagen entre el tercer y cuarto párrafo alineada a la derecha.*
+• Establecer un enlace textual a la página pag2.*
+• Establecer un enlace textual a la página pag3.*
+• Establecer un enlace textual a la página pag4.*
 • Establecer un enlace externo a una página referente a la temática
-seleccionada.
+seleccionada.*
 
 
 La página pag2 
