@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css  ">
+    <title>Document</title>
+</head>
+
+<header>
+    <h1>Ecomatica</h1>
+</header>
+
+<body>
+    <section>
+        <h1>Formulario nuevo usuario</h1>
+
+        <form action="/action_page.php" target="_blank">
+            <div id="infPersonal">
+                <h2>Informacion personal</h2>
+                <label for="fname">Nombres</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Fabian Alexander"><br>
+
+                <label for="lname">Apelldios</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Gallego Barragan"><br>
+
+                <label for="birthday">Fecha de nacimiento</label> <br>
+                <input type="date" mname="datemax" max="2007-12-31"><br>
+
+                <label for="country">Pais</label><br>
+                <input type="text" id="country" name="country" value="Colombia" disabled><br>
+
+            </div>
+
+            <div id="infContact">
+                <h2>Contacto</h2>
+                <label for="infNumber">Numero de Contacto</label> <br>
+                <input type="tel" name="infNumber" id="infNumber" placeholder="304-419-1648"
+                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}"><br>
+
+                <label for="infEmail">Correo electronico</label><br>
+                <input name="infEmail" type="email" placeholder="santiPoli@gmil.com"> <br>
+
+                <label for="infAddres">Direccion</label> <br>
+                <input type="text" name="infAddres" id="infAddres" placeholder="Calle 130 #9g-141">
+
+
+            </div>
+
+            <div>
+                <h2>Documentacion</h2>
+
+                <label for="documets">Tipo de documento</label>
+                <select name="documents" id="documents">
+                    <option value="zz" selected>Documento</option>
+                    <option value="id">Cedula</option>
+                    <option value="idCard">Tarjeta de identidad</option>
+                    <option value="permisionCar">Tarjeta de permiso</option>
+                    <option value="passport">passaporte</option>
+                </select> <br>
+
+                <label for="document">Documento</label> <br>
+                <input id="document" type="file"> <br>
+
+            </div>
+
+            <div id="aboutYou">
+                <h2>Perfil</h2>
+
+                <label for="genre">Foto de Perfil</label> <br>
+                <input type="file"> <br> <br>
+
+                <label for="genre">Genero</label> <br>
+                <input type="radio" id="html" name="genre" value="HTML">
+                <label for="genre">Masculino</label>
+                <input type="radio" id="css" name="genre" value="CSS">
+                <label for="genre">Femenino</label>
+                <input type="radio" id="javascript" name="genre" value="JavaScript">
+                <label for="genre">Otro</label>
+                <input type="text" id="fname" name="fname" placeholder="¿Cual?"><br> <br>
+
+                <label for="biografy">Cuentanos de ti</label> <br>
+                <textarea name="biografy" id="biografy" rows="3" cols="30"></textarea> <br>
+            </div>
+
+            <input type="submit">
+        </form>
+
+    </section>
+ 
+</body>
+
+</html>

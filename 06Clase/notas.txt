@@ -1,0 +1,14 @@
+Formularios
+
+controles input-type
+text
+password
+radio
+checkbox
+summit
+reset
+
+rompe input-type
+select
+option
+textarea
