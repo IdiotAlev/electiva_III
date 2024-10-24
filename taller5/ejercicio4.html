@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Áreas</title>
+</head>
+<body>
+    <h2>Calculadora de Áreas</h2>
+    <form id="areaForm">
+        <label for="figura">Selecciona una figura geométrica:</label>
+        <select id="figura" name="figura" required>
+            <option value="">Seleccione una figura</option>
+            <option value="circulo">Círculo</option>
+            <option value="cuadrado">Cuadrado</option>
+            <option value="rectangulo">Rectángulo</option>
+            <option value="triangulo">Triángulo</option>
+        </select><br><br>
+
+        <!-- Campos dinámicos -->
+        <div id="dimensiones"></div>
+
+        <button type="submit">Calcular Área</button>
+    </form>
+
+    <h3>Resultado:</h3>
+    <p id="resultado" style="font-weight: bold;"></p>
+
+    <p id="mensaje" style="color: red;"></p>
+
+    <script>
+        const dimensionesDiv = document.getElementById('dimensiones');
+
+        // Mostrar campos según la figura seleccionada
+        document.getElementById('figura').addEventListener('change', function() {
+            const figura = this.value;
+            let campos = '';
+            switch (figura) {
+                case 'circulo':
+                    campos = `
+                        <label for="radio">Radio (r):</label>
+                        <input type="number" id="radio" name="radio" min="0.01" step="0.01" required><br><br>
+                    `;
+                    break;
+                case 'cuadrado':
+                    campos = `
+                        <label for="lado">Lado (l):</label>
+                        <input type="number" id="lado" name="lado" min="0.01" step="0.01" required><br><br>
+                    `;
+                    break;
+                case 'rectangulo':
+                    campos = `
+                        <label for="base">Base (b):</label>
+                        <input type="number" id="base" name="base" min="0.01" step="0.01" required><br><br>
+                        <label for="altura">Altura (h):</label>
+                        <input type="number" id="altura" name="altura" min="0.01" step="0.01" required><br><br>
+                    `;
+                    break;
+                case 'triangulo':
+                    campos = `
+                        <label for="base">Base (b):</label>
+                        <input type="number" id="base" name="base" min="0.01" step="0.01" required><br><br>
+                        <label for="altura">Altura (h):</label>
+                        <input type="number" id="altura" name="altura" min="0.01" step="0.01" required><br><br>
+                    `;
+                    break;
+                default:
+                    campos = '';
+            }
+            dimensionesDiv.innerHTML = campos;
+        });
+
+        // Calcular el área
+        document.getElementById('areaForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Evitar el envío del formulario
+
+            const figura = document.getElementById('figura').value;
+            const mensaje = document.getElementById('mensaje');
+            const resultado = document.getElementById('resultado');
+            mensaje.textContent = '';
+            resultado.textContent = '';
+
+            let area = 0;
+
+            // Calcular el área según la figura seleccionada
+            if (figura === 'circulo') {
+                const radio = parseFloat(document.getElementById('radio').value);
+                if (radio <= 0 || isNaN(radio)) {
+                    mensaje.textContent = 'El valor del radio debe ser positivo.';
+                    return;
+                }
+                area = Math.PI * Math.pow(radio, 2);
+
+            } else if (figura === 'cuadrado') {
+                const lado = parseFloat(document.getElementById('lado').value);
+                if (lado <= 0 || isNaN(lado)) {
+                    mensaje.textContent = 'El valor del lado debe ser positivo.';
+                    return;
+                }
+                area = Math.pow(lado, 2);
+
+            } else if (figura === 'rectangulo' || figura === 'triangulo') {
+                const base = parseFloat(document.getElementById('base').value);
+                const altura = parseFloat(document.getElementById('altura').value);
+                if (base <= 0 || isNaN(base) || altura <= 0 || isNaN(altura)) {
+                    mensaje.textContent = 'Los valores de base y altura deben ser positivos.';
+                    return;
+                }
+                if (figura === 'rectangulo') {
+                    area = base * altura;
+                } else if (figura === 'triangulo') {
+                    area = (base * altura) / 2;
+                }
+
+            } else {
+                mensaje.textContent = 'Por favor, selecciona una figura.';
+                return;
+            }
+
+            // Mostrar el resultado
+            resultado.textContent = `El área es: ${area.toFixed(2)} unidades cuadradas.`;
+        });
+    </script>
+</body>
+</html>

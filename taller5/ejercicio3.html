@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Idioma</title>
+</head>
+<body>
+    <h2>Selecciona el idioma para mostrar el saludo</h2>
+    <form id="idiomaForm">
+        <label for="idioma">Selecciona un idioma:</label>
+        <select id="idioma" name="idioma" required>
+            <option value="">Seleccione un idioma</option>
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+            <option value="fr">Francés</option>
+            <option value="de">Alemán</option>
+            <option value="zh">Chino</option>
+        </select><br><br>
+
+        <button type="submit">Mostrar Saludo</button>
+    </form>
+
+    <h3>Saludo:</h3>
+    <p id="saludo" style="font-weight: bold;"></p>
+
+    <p id="mensaje" style="color: red;"></p>
+
+    <script>
+        document.getElementById('idiomaForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Evitar que el formulario se envíe
+
+            const idiomaSeleccionado = document.getElementById('idioma').value;
+            const saludo = document.getElementById('saludo');
+            const mensaje = document.getElementById('mensaje');
+
+            // Reiniciar los mensajes
+            saludo.textContent = '';
+            mensaje.textContent = '';
+
+            // Validar que el usuario haya seleccionado un idioma
+            if (idiomaSeleccionado === '') {
+                mensaje.textContent = 'Por favor, selecciona un idioma';
+                return;
+            }
+
+            // Mostrar el saludo según el idioma seleccionado
+            switch (idiomaSeleccionado) {
+                case 'es':
+                    saludo.textContent = 'Hola';
+                    break;
+                case 'en':
+                    saludo.textContent = 'Hello';
+                    break;
+                case 'fr':
+                    saludo.textContent = 'Bonjour';
+                    break;
+                case 'de':
+                    saludo.textContent = 'Guten Tag';
+                    break;
+                case 'zh':
+                    saludo.textContent = 'Nǐ hǎo';
+                    break;
+                default:
+                    saludo.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>

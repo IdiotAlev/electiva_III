@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Compra</title>
+</head>
+<body>
+    <h2>Formulario de Compra de Productos</h2>
+    <form id="compraForm">
+        <label for="cliente">Nombre del cliente:</label>
+        <input type="text" id="cliente" name="cliente" required><br><br>
+
+        <label for="producto">Nombre del producto:</label>
+        <select id="producto" name="producto" required>
+            <option value="">Seleccione un producto</option>
+            <option value="50000">Audífonos ($50,000)</option>
+            <option value="70000">Diadema ($70,000)</option>
+            <option value="60000">Mouse Inalámbrico ($60,000)</option>
+            <option value="150000">Parlantes ($150,000)</option>
+        </select><br><br>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required><br><br>
+
+        <label for="precioUnitario">Precio unitario:</label>
+        <input type="number" id="precioUnitario" name="precioUnitario" readonly><br><br>
+
+        <input type="hidden" id="codigoDescuento" name="codigoDescuento" value="123"><!-- Campo oculto del código de descuento -->
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <h3>Resultados</h3>
+    <label for="valorCompra">Valor de la compra:</label>
+    <input type="text" id="valorCompra" readonly><br><br>
+
+    <label for="valorDescuento">Valor del descuento:</label>
+    <input type="text" id="valorDescuento" readonly><br><br>
+
+    <label for="valorPagar">Valor a pagar:</label>
+    <input type="text" id="valorPagar" readonly><br><br>
+
+    <p id="mensaje" style="color: red;"></p>
+
+    <script>
+        document.getElementById('compraForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Evitar que el formulario se envíe
+
+            const cliente = document.getElementById('cliente').value;
+            const producto = document.getElementById('producto').value;
+            const cantidad = parseInt(document.getElementById('cantidad').value);
+            const codigoDescuento = document.getElementById('codigoDescuento').value;
+            const mensaje = document.getElementById('mensaje');
+            const precioUnitario = parseInt(producto);  // El valor del producto seleccionado
+            let valorCompra = 0;
+            let valorDescuento = 0;
+            let valorPagar = 0;
+
+            // Reiniciar el mensaje
+            mensaje.textContent = '';
+
+            // Validaciones
+            if (cliente === '') {
+                mensaje.textContent = 'El nombre del cliente no puede estar vacío.';
+                return;
+            }
+
+            if (producto === '') {
+                mensaje.textContent = 'Debes seleccionar un producto.';
+                return;
+            }
+
+            if (isNaN(cantidad) || cantidad <= 0) {
+                mensaje.textContent = 'La cantidad debe ser un número entero positivo mayor que 0.';
+                return;
+            }
+
+            if (isNaN(precioUnitario) || precioUnitario <= 0) {
+                mensaje.textContent = 'El precio unitario debe ser un número positivo.';
+                return;
+            }
+
+            // Calcular el valor de la compra
+            valorCompra = precioUnitario * cantidad;
+
+            // Aplicar descuento si corresponde
+            if (codigoDescuento === '123') {
+                valorDescuento = valorCompra * 0.10;  // 10% de descuento
+            } else if (codigoDescuento === '456') {
+                valorDescuento = valorCompra * 0.15;  // 15% de descuento
+            }
+
+            // Calcular el valor final a pagar
+            valorPagar = valorCompra - valorDescuento;
+
+            // Mostrar los resultados
+            document.getElementById('valorCompra').value = valorCompra.toFixed(2);
+            document.getElementById('valorDescuento').value = valorDescuento.toFixed(2);
+            document.getElementById('valorPagar').value = valorPagar.toFixed(2);
+        });
+
+        // Actualizar automáticamente el precio unitario cuando se selecciona un producto
+        document.getElementById('producto').addEventListener('change', function() {
+            const precioUnitario = parseInt(this.value);
+            if (!isNaN(precioUnitario)) {
+                document.getElementById('precioUnitario').value = precioUnitario;
+            }
+        });
+    </script>
+</body>
+</html>
